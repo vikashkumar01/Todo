@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://todowebap.herokuapp.com/"
+const url = "https://todowebap.herokuapp.com"
 
 export const loginUser = (email, password) => async (dispatch) => {
     try {
