@@ -1,0 +1,46 @@
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh;
+}
+
+.addTask{
+    font-size: 40px;
+    color:coral;
+}
+
+.form{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.addForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addForm>label{
+    margin: 10px 0;
+
+}
+
+.addInput{
+    padding: 10px;
+    background-color: white;
+    border:none;
+    border-bottom: 1px solid black;
+    
+}
+
+.addButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border:none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
