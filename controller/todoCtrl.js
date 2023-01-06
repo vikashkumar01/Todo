@@ -100,6 +100,7 @@ const getMyProfile = async (req, res) => {
     }
 }
 
+
 const logout = async (req, res) => {
 
     try {

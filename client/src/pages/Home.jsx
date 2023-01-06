@@ -22,27 +22,35 @@ const Home = () => {
   }
 
   return (
-    <div className="container">
-      <div className="allTask">
-        <span className="task">ALL TASK</span>
-      </div>
+    <div className='preContainer'>
+      <div className="container">
+        <div className="allTask">
+          <span className="task">TASKS</span>
+        </div>
 
-      <div className="alldetail">
+        <div className="alldetail">
 
-        {todos?.map((p) => (
-          
+          {todos?.map((p) => (
+
             <div className="detail" key={p._id}>
 
-              <h3 className="title">{p.title}</h3>
-              <p className="desc">{p.description}</p>
-               
-               <Link to={`/utask/${p._id}`}><i className="fa-solid fa-pen-to-square edit"></i></Link>
-              <button onClick={()=>deleteTask(p._id)}><i className="fa-solid fa-trash-can delete"></i></button>
-              
+              <div className='taskContainer'>
+
+                <h3 className="title">{p.title}</h3>
+                <p className="desc">{p.description}</p>
+
+              </div>
+
+              <div className='btnContainer'>
+                <Link className='edit' to={`/utask/${p._id}`}><i className="fa-solid fa-pen-to-square "></i></Link>
+                <button className='delete' onClick={() => deleteTask(p._id)}><i className="fa-solid fa-trash-can "></i></button>
+              </div>
             </div>
 
-        ))
-        }
+          ))
+          }
+
+        </div>
 
       </div>
 

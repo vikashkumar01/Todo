@@ -23,8 +23,9 @@ const Register = () => {
   
   return (
 
+    <div className='registerContainer'>
     <div className="register">
-      <span className="registerTitle">Resgister</span>
+      <h3 className="registerTitle">Resgister</h3>
       <form className="registerForm" autoComplete="off" onSubmit={handleSubmit} >
 
         <label>Username</label>
@@ -41,6 +42,7 @@ const Register = () => {
       </form>
 
       {error && <span style={{ color: "red", marginTop: "10px" }}>Something went wrong</span>}
+    </div>
     </div>
 
   )

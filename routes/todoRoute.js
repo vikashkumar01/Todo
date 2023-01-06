@@ -1,5 +1,5 @@
 const express = require('express');
-const { createTodo, fetchTodos, fetchTodo, updateTodo, deleteTodo, getMyProfile, logout } = require('../controller/todoCtrl');
+const { createTodo, fetchTodos, fetchTodo, updateTodo, deleteTodo, getMyProfile, deleteMyProfile, logout } = require('../controller/todoCtrl');
 const { isAuthenticated } = require('../middlewares/auth');
 const route = express.Router();
 

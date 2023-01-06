@@ -17,8 +17,9 @@ const Login = () => {
 
 
   return (
+    <div className='loginContainer'>
     <div className="login">
-      <span className="loginTitle">Login</span>
+      <h3 className="loginTitle">Login</h3>
       <form className="loginForm" onSubmit={handleSubmit}>
         <label>Email</label>
         <input type="email" className="loginInput" ref={emailRef} placeholder="Enter Your Email..." required></input>
@@ -29,6 +30,7 @@ const Login = () => {
         <button className="loginButton" type="submit" >Login</button>
 
       </form>
+    </div>
     </div>
   )
 };

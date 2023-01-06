@@ -1,6 +1,5 @@
 import axios from "axios";
 
-const url = "https://todowebap.herokuapp.com"
 
 export const loginUser = (email, password) => async (dispatch) => {
     try {
@@ -9,7 +8,7 @@ export const loginUser = (email, password) => async (dispatch) => {
             type: "LoginRequest",
         });
 
-        const { data } = await axios.post(url+"/api/auth/login", { email, password },
+        const { data } = await axios.post("/api/auth/login", { email, password },
             {
                 headers: {
                     "Content-Type": "application/json",
@@ -40,7 +39,7 @@ export const registerUser = (username, email, password) => async (dispatch) => {
             type: "RegisterRequest",
         });
 
-        const { data } = await axios.post(url+"/api/auth/register", { username, email, password },
+        const { data } = await axios.post("/api/auth/register", { username, email, password },
             {
                 headers: {
                     "Content-Type": "application/json",
@@ -70,7 +69,7 @@ export const logoutUser = () => async (dispatch) => {
         type: "LogoutUserRequest",
       });
   
-      await axios.get(url+"/api/todos/logout");
+      await axios.get("/api/todos/logout");
   
       dispatch({
         type: "LogoutUserSuccess",
@@ -90,7 +89,7 @@ export const getUser = () => async (dispatch) => {
             type: "LoadUserRequest",
         });
 
-        const { data } = await axios.get(url+"/api/todos/getUser");
+        const { data } = await axios.get("/api/todos/getUser");
 
         dispatch({
             type: "LoadUserSuccess",
@@ -116,7 +115,7 @@ export const addTask = (title, description) => async (dispatch) => {
             type: "AddTaskRequest",
         });
 
-        const { data } = await axios.post(url+"/api/todos/createTodo", {title,description },
+        const { data } = await axios.post("/api/todos/createTodo", {title,description },
             {
                 headers: {
                     "Content-Type": "application/json",
@@ -147,7 +146,7 @@ export const deleteTodo = (id) => async (dispatch) => {
             type: "DeleteTaskRequest",
         });
 
-        const { data } = await axios.delete(url+"/api/todos/deleteTodo/"+id);
+        const { data } = await axios.delete("/api/todos/deleteTodo/"+id);
 
         dispatch({
             type: "DeleteTaskSuccess",
@@ -170,7 +169,7 @@ export const getTodo = (id) => async (dispatch) => {
             type: "SingleTaskRequest",
         });
 
-        const { data } = await axios.get(url+"/api/todos/fetchTodo/"+id);
+        const { data } = await axios.get("/api/todos/fetchTodo/"+id);
 
         dispatch({
             type: "SingleTaskSuccess",
@@ -193,7 +192,7 @@ export const editTodo = (id,title,description) => async (dispatch) => {
             type: "EditTaskRequest",
         });
 
-        const { data } = await axios.put(url+"/api/todos/updateTodo/"+id,{title,description },
+        const { data } = await axios.put("/api/todos/updateTodo/"+id,{title,description },
         {
             headers: {
                 "Content-Type": "application/json",
@@ -221,7 +220,7 @@ export const getTask = () => async (dispatch) => {
             type: "GetTaskRequest",
         });
 
-        const { data } = await axios.get(url+"/api/todos/fetchTodos");
+        const { data } = await axios.get("/api/todos/fetchTodos");
 
         dispatch({
             type: "GetTaskSuccess",

@@ -1,47 +1,70 @@
+.loginContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login{
 
-    height: 600px;
+    width: 30%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgb(183, 183, 183);
+    margin-top: -70px;
     
 }
 
 .loginTitle{
-    font-size: 50px;
+    font-size: 30px;
+    color:crimson
 }
 
+
 .loginForm{
+    width: 100%;
+    height: 85%;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
 }
 
 .loginForm>label{
+    font-size: 20px;
     margin: 10px 0;
+    color: gray;
+
 
 }
 
 .loginInput{
-    padding: 10px;
+    width: 100%;
+    outline: none;
+    padding: 20px;
     background-color: white;
     border:none;
-    border-bottom: 1px solid black;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    font-size: 15px;
     
 }
 
 .loginButton{
+    height: 50px;
     margin-top: 20px;
     cursor: pointer;
-    background-color: lightcoral;
+    background-color:crimson;
     border:none;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
+    font-size: 15px;
 }
 
-.loginButton:disabled{
-    cursor: not-allowed;
-    background-color:coral;
-}
+

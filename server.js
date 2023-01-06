@@ -8,8 +8,6 @@ const auth = require('./routes/auth')
 const path = require('path')
 const app = express();
 
-const client = ('')
-
 
 if (process.env.NODE_ENV !== 'production') {
 
@@ -29,20 +27,7 @@ mongoose.connect(process.env.MONGODB_URL, {
     .then(console.log("connected to mongodb"))
     .catch((err) => console.log(err))
 
-
-
-
-
 app.use('/api/auth', auth);
 app.use('/api/todos', route);
-
-
-app.use(express.static(path.join(__dirname, "./client/build")));
-
-app.get('*', (req, res) => {
-    
-    res.sendFile(path.resolve(__dirname, './client/build/index.html'));
-});
-
 
 app.listen(port, console.log(`listening on port ${port}`));
